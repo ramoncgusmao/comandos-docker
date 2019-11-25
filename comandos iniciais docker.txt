@@ -1,0 +1,24 @@
+
+Docker run <nome-imagem> = cria um novo container 
+Docker run --name <nome> <nome-imagem> = cria um novo container e nomeia ele
+Docker run -P <nome-imagem> = gera uma porta aleatoria para ser acessado pelo lado externo
+Docker run -p <nome da porta no windows> : <nome da porta do docker> <nome-imagem> = nomeia a porta que voce quer trabalhar
+Docker run -d <nome-imagem> = cria um novo containher de maneira detached nao travando o cmd
+Docker run -e <variavel de ambiente> <nome-imagem> = cria uma variavel de ambiente para o container novo
+
+Docker ps  = lista todas as imagens ativas
+docker ps -a  = lista todos os container ativos
+docker stop <hash> = para o container pelo hash
+docker stop <name> = = para o container desse name
+docker ps -q  = devolver só os hash
+docker stop $(docker ps -q) = para todos os container que são devolvidos nessa consulta
+docker stop -t 0 <hash> = define o tempo para parar o container o default é 10 segundos 
+docker container prune = remove todos os container parados
+docker port <hash> = exite as portas que esse container está usando
+
+docker rmi <nome_imagem> = remove a imagem passado pelo parametro
+docker rm <hash> = remove esse container
+docker run -it <nome-imagem> = cria um container e abre o terminal dele
+
+docker start -a -i <hash> = starta um container e abre o terminal dele
+docker start <hash> =  = starta um container 
